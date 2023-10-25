@@ -9,6 +9,7 @@ class Die:
         self.die_height = DIE_HEIGHT
         self.die_width = DIE_WIDTH
         self.die_face_separator = DIE_FACE_SEPARATOR
+        self.die_line_width = 10
 
     def roll(self, die_count: int):
         """
@@ -39,8 +40,9 @@ class Die:
         """
         # break the list into lists of 10
         die_rolled_list = []
-        for i in range(0, len(dice_rolled), 10):
-            die_rolled_list.append(dice_rolled[i : i + 10])
+        for i in range(0, len(dice_rolled), self.die_line_width):
+            # append a list of 10 dice rolled to the list
+            die_rolled_list.append(dice_rolled[i : i + self.die_line_width])
 
         # print the die face for each die rolled in the list
         # prints the die face line by line
@@ -69,8 +71,19 @@ while roll_again == "Y":
         die_count = input("Invalid input. Please enter a valid number: ")
     die_count = int(die_count)
 
-    print(f"You rolled {die.roll(die_count)}!\n")
+    # print output
+    print(f"You rolled {die.roll(die_count)}!")
 
+    # https://calculator.academy/dice-average-calculator/
+    # AV=((M+1)/2)∗N
+    # Where AV is the average dice value
+    # M is the max value of all dice
+    # N is the total number of die
+    print(
+        f"Mathematically, the average total of all roll's is {int(die_count * 3.5)}.\n"
+    )
+
+    # ask to roll again
     roll_again = input("Would you like to roll again? (Y/N) ").upper()
     while roll_again not in ["Y", "N"]:
         roll_again = input("Invalid input. Please enter Y or N: ").upper()
