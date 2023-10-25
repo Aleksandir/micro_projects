@@ -12,7 +12,8 @@ class Die:
     def roll(self, die_count):
         for i in range(die_count):
             print(die_face[randint(1, 6)], end="")
-            print("\n")
+
+    print("\n")
 
 
 die = Die()
@@ -20,7 +21,7 @@ roll_again = "Y"
 while roll_again == "Y":
     system("clear")
 
-    die_count = input("How many dice would you like to roll?")
+    die_count = input("How many dice would you like to roll?: ")
     while not die_count.isdigit():
         die_count = input("Invalid input. Please enter a valid number: ")
     die_count = int(die_count)
