@@ -10,7 +10,16 @@ class Die:
         self.die_width = DIE_WIDTH
         self.die_face_separator = DIE_FACE_SEPARATOR
 
-    def roll(self, die_count):
+    def roll(self, die_count: int):
+        """
+        Simulates rolling a die.
+
+        Parameters:
+        die_count (int): The number of dice to roll.
+
+        Returns:
+        int: The total value of the dice rolled.
+        """
         count = 0
         dice_rolled = []
         for i in range(die_count):
@@ -21,14 +30,26 @@ class Die:
         self.print_die_face(dice_rolled)
         return count
 
-    def print_die_face(self, dice_rolled):
-        # loop through the height of the die
-        # print the top of each die face separated by the die face separator
-        # when at the end of the row, print a newline and move on to the next line
-        for i in range(self.die_height):
-            for die in dice_rolled:
-                print(self.die_face[die][i], end=self.die_face_separator)
-            print()
+    def print_die_face(self, dice_rolled: list):
+        """
+        Prints the ASCII art representation of the dice rolled.
+
+        Parameters:
+        dice_rolled (list): A list of integers representing the dice rolled.
+        """
+        # break the list into lists of 10
+        die_rolled_list = []
+        for i in range(0, len(dice_rolled), 10):
+            die_rolled_list.append(dice_rolled[i : i + 10])
+
+        # print the die face for each die rolled in the list
+        # prints the die face line by line
+        # once at end of first list, prints a newline and moves to next list
+        for list in die_rolled_list:
+            for i in range(self.die_height):
+                for die in list:
+                    print(self.die_face[die][i], end=self.die_face_separator)
+                print()
 
 
 def clear_screen():
