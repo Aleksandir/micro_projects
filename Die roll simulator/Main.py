@@ -1,19 +1,14 @@
 from curses.ascii import isdigit
-import sys
 from art import die_face
 from random import randint
 from os import system
 
 
 class Die:
-    def __init__(self):
-        faces = ["", 1, 2, 3, 4, 5, 6]
-
     def roll(self, die_count):
         for i in range(die_count):
             print(die_face[randint(1, 6)], end="")
-
-    print("\n")
+        print()
 
 
 die = Die()
