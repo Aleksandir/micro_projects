@@ -40,17 +40,17 @@ class Die:
         """
         # break the list into lists of 10
         die_rolled_list = []
-        for i in range(0, len(dice_rolled), self.die_line_width):
+        for row in range(0, len(dice_rolled), self.die_line_width):
             # append a list of 10 dice rolled to the list
-            die_rolled_list.append(dice_rolled[i : i + self.die_line_width])
+            die_rolled_list.append(dice_rolled[row : row + self.die_line_width])
 
         # print the die face for each die rolled in the list
         # prints the die face line by line
         # once at end of first list, prints a newline and moves to next list
-        for list in die_rolled_list:
-            for i in range(self.die_height):
-                for die in list:
-                    print(self.die_face[die][i], end=self.die_face_separator)
+        for die_set in die_rolled_list:
+            for row in range(self.die_height):
+                for die in die_set:
+                    print(self.die_face[die][row], end=self.die_face_separator)
                 print()
 
 
