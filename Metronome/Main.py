@@ -25,6 +25,15 @@ class Metronome:
             # Wait for the remaining time in the loop interval
             sleep(self.loop_interval)
 
+    @property
+    def bpm(self):
+        return self._bpm
+
+    @bpm.setter
+    def bpm(self, value):
+        self._bpm = value
+        self.loop_interval = 60 / value
+
 
 # GUI design
 sg.theme("DarkAmber")
@@ -50,11 +59,9 @@ def get_bpm():
             print("Invalid input. Please enter a valid integer or q to quit.")
 
 
-metronome = Metronome(60)
-
-
 #! currently wont quit or change bpm after being called
 def main():
+    metronome = Metronome(60)
     while True:
         event, values = window.read()
         bpm = int(values["bpm"])
@@ -62,6 +69,7 @@ def main():
             break
         elif event == "Start":
             metronome.bpm = bpm
+            metronome.loop_interval = 60 / bpm
             metronome.play_metronome()
         elif event == "Stop":
             metronome.action = "stop"
