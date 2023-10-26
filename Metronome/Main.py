@@ -1,4 +1,3 @@
-from curses.ascii import isdigit
 from time import sleep
 from subprocess import Popen
 import keyboard
@@ -35,7 +34,7 @@ class Metronome:
 quit = ""
 bpm = input("Enter the BPM: ")
 while quit != "q":
-    print("Press space to stop the metronome.")
+    print(f"BPM set: {bpm}\nPress space to stop the metronome.")
 
     metronome = Metronome(int(bpm))
     metronome.play_metronome()
