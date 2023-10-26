@@ -2,6 +2,7 @@ from time import sleep
 from subprocess import Popen
 import keyboard
 import os
+import PySimpleGUI as sg
 
 
 class Metronome:
@@ -11,17 +12,11 @@ class Metronome:
         self.action = ""
         self.sound = ["afplay", "Metronome/beep.mp3"]
 
-        # Register the callback function for the space key
-        keyboard.on_press_key("space", self.on_space_pressed)
-
-    # Define a callback function that is called when the space key is pressed
-    def on_space_pressed(self, event):
-        self.action = "stop"
-
     def play_metronome(self):
         while True:
-            # Check if the space key has been pressed
+            # Check if the stop action has been triggered
             if self.action == "stop":
+                self.action = ""  # Reset the action attribute
                 break
 
             # Play the sound
@@ -29,6 +24,17 @@ class Metronome:
 
             # Wait for the remaining time in the loop interval
             sleep(self.loop_interval)
+
+
+# GUI design
+sg.theme("DarkAmber")
+layout = [
+    [sg.Text("Enter the BPM: ")],
+    [sg.InputText(key="bpm")],
+    [sg.Button("Start"), sg.Button("Stop")],
+    [sg.Button("quit")],
+]
+window = sg.Window("Metronome", layout)
 
 
 def get_bpm():
@@ -44,19 +50,23 @@ def get_bpm():
             print("Invalid input. Please enter a valid integer or q to quit.")
 
 
+metronome = Metronome(60)
+
+
+#! currently wont quit or change bpm after being called
 def main():
-    os.system("clear")
     while True:
-        bpm = get_bpm()
-        if bpm is None:
+        event, values = window.read()
+        bpm = int(values["bpm"])
+        if event == sg.WINDOW_CLOSED:
             break
-
-        print(f"BPM set: {bpm}\nPress space to stop the metronome.")
-
-        metronome = Metronome(bpm)
-        metronome.play_metronome()
-
-        os.system("clear")
+        elif event == "Start":
+            metronome.bpm = bpm
+            metronome.play_metronome()
+        elif event == "Stop":
+            metronome.action = "stop"
+        elif event == "quit":
+            break
 
 
 main()
