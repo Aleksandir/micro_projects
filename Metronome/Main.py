@@ -1,7 +1,7 @@
 from time import sleep
 from subprocess import Popen
 import keyboard
-from os import system
+import os
 
 
 class Metronome:
@@ -31,18 +31,32 @@ class Metronome:
             sleep(self.loop_interval)
 
 
-quit = ""
-bpm = input("Enter the BPM: ")
-while quit != "q":
-    print(f"BPM set: {bpm}\nPress space to stop the metronome.")
+def get_bpm():
+    while True:
+        bpm_str = input("Enter the BPM (or q to quit): ")
+        if bpm_str == "q":
+            return None
+        try:
+            bpm = int(bpm_str)
+            return bpm
+        except ValueError:
+            print("Invalid input. Please enter a valid integer or q to quit.")
 
-    metronome = Metronome(int(bpm))
-    metronome.play_metronome()
 
-    quit = input("\nPress q to quit or the BPM to continue: ")
-    if quit.isdigit():
-        bpm = quit
-    else:
-        quit = str(quit)
+def main():
+    os.system("clear")
+    while True:
+        bpm = get_bpm()
+        if bpm is None:
+            break
 
-    system("clear")
+        print(f"BPM set: {bpm}\nPress space to stop the metronome.")
+
+        metronome = Metronome(bpm)
+        metronome.play_metronome()
+
+        os.system("clear")
+
+
+if __name__ == "__main__":
+    main()
