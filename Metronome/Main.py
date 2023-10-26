@@ -34,7 +34,8 @@ class Metronome:
 def get_bpm():
     while True:
         bpm_str = input("Enter the BPM (or q to quit): ")
-        if bpm_str == "q":
+        # checking if in string due to extra space when first checked
+        if "q" in bpm_str.lower():
             return None
         try:
             bpm = int(bpm_str)
@@ -58,5 +59,4 @@ def main():
         os.system("clear")
 
 
-if __name__ == "__main__":
-    main()
+main()
