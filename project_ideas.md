@@ -16,14 +16,14 @@
    | use pygame to make snake                                                   | 8                 |
    | Python pdf manager                                                         | 8                 |
    | Chess game                                                                 | 8                 |
-   | Elevator class                                                             | 2?                |
-   | calculator with GUI                                                        | 5                 |
    | web scraper to compare price between woolworths and coles (beautiful soup) | 8                 |
+   | Book finder app                                                            | 8                 |
+   | recipe app (using a database)                                              | 8                 |
+   | calculator with GUI                                                        | 5                 |
    | Todo list app                                                              | 5                 |
+   | drawing app with gui                                                       | 5                 |
    | weight conversion tool with gui                                            | 3                 |
    | count down timer with gui                                                  | 3                 |
    | metronome with gui                                                         | 3                 |
    | Flip image tool with gui                                                   | 3                 |
-   | drawing app with gui                                                       | 5                 |
-   | book finder app                                                            | 8                 |
-   | recipe app (using a database)                                              | 8                 |
+   | Elevator class                                                             | 2?                |
