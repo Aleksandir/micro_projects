@@ -1,11 +1,3 @@
-1. Shopping list where it checks if product is on sale, where its cheapest
-2. App that takes a bunch of options and chooses one at random
-3. Web app shows shapes and solves for parts
-4. Human benchmarks scripts
-5. Learn pygame
-6. Python pdf manager
-7. Chess game
-8. Elevator class
    difficulty = 1,2,3,5,8,13,21,34
 
    | Idea                                                                       | difficulty/rating |
