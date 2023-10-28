@@ -15,5 +15,6 @@ def get_name(student):
     return student["name"]
 
 
-for student in sorted(students, key=get_house):
+# lambda function is a function without a name, acts as a one line function representing the above functions
+for student in sorted(students, key=lambda student: student["house"]):
     print(f"s{student['name']} is in {student['house']}")
