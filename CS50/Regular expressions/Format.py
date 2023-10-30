@@ -4,7 +4,7 @@ import re
 name = input("Name: ").strip()
 
 # Search for a last name, comma, first name
-matches = re.search(r"^(.+), (.+)$", name)
+matches = re.search(r"^(.+), *(.+)$", name)
 
 # If the name matches the pattern, extract the last name and first name
 if matches:
