@@ -2,9 +2,20 @@ class Student:
     def __init__(self, name, house):
         if not name:
             raise ValueError("Name is required")
+        self.name = name
+        self.house = house
+
+    def __str__(self):
+        return f"{self.name} from {self.house}"
+
+    @property
+    def house(self):
+        return self.house
+
+    @house.setter
+    def house(self, house):
         if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
             raise ValueError("House is invalid")
-        self.name = name
         self.house = house
 
 
