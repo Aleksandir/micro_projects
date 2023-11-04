@@ -6,12 +6,16 @@ choice = None
 
 window = tk.Tk()
 
-greeting = tk.Label(text="Hello, Tkinter")
-greeting.pack()
+greeting = tk.Label(text="Welcome to the weight converter!")
+greeting.pack(padx=10, pady=10)
 
-kg_value = tk.Entry()
+kg_text = tk.Label(text="Enter the weight in kilograms: ")
+kg_text.pack()
+kg_value = tk.Entry(text="test")
 kg_value.pack()
 
+lb_text = tk.Label(text="Enter the weight in pounds: ")
+lb_text.pack()
 lb_value = tk.Entry()
 lb_value.pack()
 
