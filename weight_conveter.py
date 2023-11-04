@@ -26,10 +26,10 @@ while True:
 
     if choice == "1":
         weight = float(input("Enter the weight in pounds: "))
-        print(f"The weight in kilograms is {lb_to_kb(weight)}")
+        print(f"The weight in kilograms is {round(lb_to_kb(weight), 1)}")
     elif choice == "2":
         weight = float(input("Enter the weight in kilograms: "))
-        print(f"The weight in pounds is {kg_to_lb(weight)}")
+        print(f"The weight in pounds is {round(kg_to_lb(weight), 1)}")
     elif choice == "3":
         print("Thanks for using the weight converter!")
         break
