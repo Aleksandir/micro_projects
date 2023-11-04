@@ -1,8 +1,21 @@
-# from tkinter import *
+import tkinter as tk
 
 CONVERT_TO_KG = 0.45359237
 CONVERT_TO_LB = 2.2046226218
 choice = None
+
+window = tk.Tk()
+
+greeting = tk.Label(text="Hello, Tkinter")
+greeting.pack()
+
+kg_value = tk.Entry()
+kg_value.pack()
+
+lb_value = tk.Entry()
+lb_value.pack()
+
+window.mainloop()
 
 
 def lb_to_kb(weight):
