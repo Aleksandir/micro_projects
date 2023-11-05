@@ -9,7 +9,6 @@ difficulty = 1,2,3,5,8,13,21,34
 
 | Idea                                                                                                          | difficulty/rating |
 | ------------------------------------------------------------------------------------------------------------- | ----------------- |
-| weight conversion tool with gui                                                                               | 3                 |
 | count down timer with gui                                                                                     | 3                 |
 | metronome with gui                                                                                            | 3                 |
 | Flip image tool with gui                                                                                      | 3                 |
