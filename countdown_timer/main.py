@@ -34,14 +34,28 @@ class timer:
 
 # create timer object
 
+
 # create a window
+
+window = tk.Tk()
+window.title("Countdown Timer")
+window.resizable(False, False)
+
 # create a data entry panel
+time_entry = tk.Entry(window, width=15)
+time_entry.grid(row=0, column=0, columnspan=2, padx=10)
+
 # create a start/stop button
+start_stop_button = tk.Button(window, text="Start")
+start_stop_button.grid(row=1, column=0, padx=10)
+
 # create a reset button
+reset_button = tk.Button(window, text="Reset")
+reset_button.grid(row=1, column=1, padx=10)
+
 # create a label to display the timer
-# create a layout
+display_label = tk.Label(window, text="00:00:00")
+display_label.grid(row=2, column=0, columnspan=2, padx=10)
 
-# count down pane in the middle top
-# start button in the middle left and stop in the middle right
 
-# window.mainloop()
+window.mainloop()
