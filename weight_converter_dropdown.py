@@ -8,18 +8,27 @@ def converter(conversion_value, unit):
     value.insert(0, f"{round(converted_weight, 1)} {unit}")
 
 
-options = [
-    "Kg to Lb",
-    "Lb to Kg",
-    "Kg to Oz",
-    "Oz to Kg",
-    "Lb to Oz",
-    "Oz to Lb",
-    "Kg to G",
-    "G to Kg",
-    "G to Lb",
-    "G to Oz",
-]
+def convert():
+    conversion_type = option.get()
+    weight = float(weight_entry.get())
+    conversion_value = conversions[conversion_type]
+    converted_weight = weight * conversion_value
+
+
+conversions = {
+    "Kg to Lb": 2.20462,
+    "Lb to Kg": 0.453592,
+    "Kg to Oz": 35.274,
+    "Oz to Kg": 0.0283495,
+    "Lb to Oz": 16,
+    "Oz to Lb": 0.0625,
+    "Kg to G": 1000,
+    "G to Kg": 0.001,
+    "G to Lb": 0.00220462,
+    "G to Oz": 0.035274,
+}
+
+options = list(conversions.keys())
 
 
 window = tk.Tk()
@@ -44,7 +53,7 @@ converter_text.grid(column=0, row=1)
 # colum 2
 value.grid(column=1, row=1, pady=10, padx=10)
 
-# row 3
+# colum 3
 options.grid(column=0, row=3, columnspan=2, pady=10, padx=10)
 
 window.mainloop()
