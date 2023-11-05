@@ -33,18 +33,20 @@ class Timer:
         self.time = 0
 
 
+# Create the main window
 window = tk.Tk()
 window.title("Countdown Timer")
 window.resizable(False, False)
 
-timer = Timer(10)
+# Create the Timer object
+timer = Timer(0)
 
-# create a data entry panel
+# Create the data entry panel
 time_entry = tk.Entry(window, width=15)
-time_entry.grid(row=0, column=0, columnspan=2, padx=10)
+time_entry.grid(row=0, column=1, columnspan=2, padx=10)
 
 
-# logic to start/stop the timer toggle and logic
+# Define the start/stop function
 def start_stop():
     if start_stop_button["text"] == "Start":
         if timer.time == 0:
@@ -56,30 +58,37 @@ def start_stop():
         timer.stop()
 
 
+# Create the start/stop button
 start_stop_button = tk.Button(window, width=5, text="Start", command=start_stop)
 start_stop_button.grid(row=1, column=0, padx=10)
 
 
-# create a reset button and logic
+# Define the reset function
 def reset():
     timer.reset()
     display_label["text"] = "00:00:00"
     start_stop_button["text"] = "Start"
 
 
+# Create the reset button
 reset_button = tk.Button(window, width=5, text="Reset", command=reset)
 reset_button.grid(row=1, column=1, padx=10)
 
 
-# create a label to display the timer
+# Define the function to update the display label
 def update_label():
     display_label["text"] = timer.time
     if timer.running:
         display_label.after(1, update_label)
 
 
+# Create the display label
 display_label = tk.Label(window, text="00:00:00")
 display_label.grid(row=2, column=0, columnspan=2, padx=10)
 
+# Create the heading label
+heading_label = tk.Label(window, text="Time in seconds")
+heading_label.grid(row=0, column=0, padx=10)
 
+# Start the main loop
 window.mainloop()
