@@ -23,10 +23,6 @@ window = tk.Tk()
 window.resizable(width=False, height=False)
 window.title("Weight Converter")
 
-
-greeting = tk.Label(text="Welcome to the weight converter!")
-greeting.grid(column=1, row=0, padx=10, pady=10)
-
 kg_text = tk.Label(text="kilograms: ")
 kg_text.grid(column=0, row=1)
 kg_value = tk.Entry()
