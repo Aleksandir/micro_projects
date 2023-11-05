@@ -1,22 +1,11 @@
 import tkinter as tk
 
-CONVERT_TO_KG = 0.45359237
-CONVERT_TO_LB = 2.2046226218
-choice = None
 
-
-def lb_to_kg():
+def converter(conversion_value, unit):
     weight = value.get()
-    converted_weight = float(weight) * CONVERT_TO_KG
+    converted_weight = float(weight) * conversion_value
     value.delete(0, tk.END)
-    value.insert(0, f"{round(converted_weight, 1)} Lb")
-
-
-def kg_to_lb():
-    weight = value.get()
-    converted_weight = float(weight) * CONVERT_TO_LB
-    value.delete(0, tk.END)
-    value.insert(0, f"{round(converted_weight, 1)} Kg")
+    value.insert(0, f"{round(converted_weight, 1)} {unit}")
 
 
 window = tk.Tk()
@@ -27,8 +16,8 @@ window.title("Weight Converter")
 converter_text = tk.Label(text="Weight:")
 
 # buttons
-kg_button = tk.Button(text="Lb to Kg", command=lb_to_kg)
-lb_button = tk.Button(text="Kg to Lb", command=kg_to_lb)
+kg_button = tk.Button(text="Lb to Kg", command=lambda: converter(0.45359237, "kg"))
+lb_button = tk.Button(text="Kg to Lb", command=lambda: converter(2.2046226218, "lb"))
 
 # Data entry panel
 value = tk.Entry(width=10)
