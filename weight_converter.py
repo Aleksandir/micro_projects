@@ -23,12 +23,12 @@ lb_button = tk.Button(text="Kg to Lb", command=lambda: converter(2.2046226218, "
 value = tk.Entry(width=10)
 
 # Layout
-# row 1
+# colum o
 converter_text.grid(column=0, row=1)
-value.grid(column=1, row=1, pady=10, padx=10)
-
-# row 2
 kg_button.grid(column=0, row=2)
+
+# colum 2
+value.grid(column=1, row=1, pady=10, padx=10)
 lb_button.grid(column=1, row=2)
 
 # row 3
