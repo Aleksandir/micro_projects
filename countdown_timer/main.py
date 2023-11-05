@@ -33,14 +33,6 @@ class Timer:
         self.time = 0
 
 
-# start/stop should be able to start the timer, and press again to pause
-# reset should reset the timer to the original time and stop the timer
-
-# create timer object
-
-
-# create a window
-
 window = tk.Tk()
 window.title("Countdown Timer")
 window.resizable(False, False)
