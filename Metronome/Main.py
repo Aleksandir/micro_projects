@@ -30,6 +30,9 @@ class Metronome:
 
 
 def start():
+    if metronome.action == "start":
+        return
+
     metronome.action = "start"
     metronome.bpm = int(bpm.get())
     metronome.loop_interval = 60 / metronome.bpm
