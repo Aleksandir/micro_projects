@@ -21,44 +21,27 @@ def kg_to_lb():
 
 window = tk.Tk()
 window.resizable(width=False, height=False)
+window.title("Weight Converter")
 
 
 greeting = tk.Label(text="Welcome to the weight converter!")
-greeting.pack(padx=10, pady=10)
+greeting.grid(column=1, row=0, padx=10, pady=10)
 
-kg_text = tk.Label(text="Enter the weight in kilograms: ")
-kg_text.pack()
-
+kg_text = tk.Label(text="kilograms: ")
+kg_text.grid(column=0, row=1)
 kg_value = tk.Entry()
-kg_value.pack()
-
+kg_value.grid(column=1, row=1)
 kg_button = tk.Button(text="Convert to pounds", command=lb_to_kg)
-kg_button.pack()
+kg_button.grid(column=2, row=1)
 
 
-lb_text = tk.Label(text="Enter the weight in pounds: ")
-lb_text.pack()
+# lb_text = tk.Label(text="Enter the weight in pounds: ")
+# lb_text.pack()
 
-lb_value = tk.Entry()
-lb_value.pack()
+# lb_value = tk.Entry()
+# lb_value.pack()
 
-lb_button = tk.Button(text="Convert to kilograms", command=kg_to_lb)
-lb_button.pack()
+# # lb_button = tk.Button(text="Convert to kilograms", command=kg_to_lb)
+# lb_button.pack()
 
 window.mainloop()
-
-# if :
-#     kg_text = kg_value.get()
-#     kg_text.insert(0, f"The weight in pounds is {round(kg_to_lb(weight), 1)}")
-
-
-# while True:
-#     if choice == "1":
-#         weight = float(input("Enter the weight in pounds: "))
-#         print(f"The weight in kilograms is {round(lb_to_kb(weight), 1)}")
-#     elif choice == "2":
-#         weight = float(input("Enter the weight in kilograms: "))
-#         print(f"The weight in pounds is {round(kg_to_lb(weight), 1)}")
-#     elif choice == "3":
-#         print("Thanks for using the weight converter!")
-#         break
