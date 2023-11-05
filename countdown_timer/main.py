@@ -8,6 +8,7 @@ class Timer:
     def __init__(self, time):
         self.time = time
         self.running = False
+        self.display = str(datetime.timedelta(seconds=self.time))
 
     def start(self):
         if not self.running:
@@ -18,7 +19,8 @@ class Timer:
     def _run(self):
         while self.running:
             self.time -= 1
-            print(self.time)
+            self.display = str(datetime.timedelta(seconds=self.time))
+            display_label["text"] = self.display
             time.sleep(1)
             if self.time == 0:
                 self.running = False
@@ -27,6 +29,7 @@ class Timer:
         self.running = False
 
     def reset(self):
+        self.display
         self.time = 0
 
 
