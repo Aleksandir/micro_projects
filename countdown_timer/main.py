@@ -1,9 +1,33 @@
-# import tkinter
+import threading
+import time
+import tkinter as tk
 
-# create timer class
-# timer class has a start and stop method
-# stop method runs in a separate thread and calls the stop method of the timer object
-# timer class has a property that returns the time remaining and
+
+class timer:
+    def __init__(self, time):
+        self.time = time
+        self.running = False
+
+    def start(self):
+        if not self.running:
+            self.running = True
+            self.thread = threading.Thread(target=self._run)
+            self.thread.start()
+
+    def _run(self):
+        while self.running:
+            self.time -= 1
+            print(self.time)
+            time.sleep(1)
+            if self.time == 0:
+                self.running = False
+
+    def stop(self):
+        self.running = False
+
+    def reset(self):
+        self.time = 0
+
 
 # start/stop should be able to start the timer, and press again to pause
 # reset should reset the timer to the original time and stop the timer
