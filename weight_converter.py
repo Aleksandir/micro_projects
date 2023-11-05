@@ -6,15 +6,17 @@ choice = None
 
 
 def lb_to_kg():
-    weight = lb_value.get()
+    weight = kg_value.get()
     converted_weight = float(weight) * CONVERT_TO_KG
-    lb_text.insert(0, f"The weight in kilograms is {round(converted_weight, 1)}")
+    kg_value.delete(0, tk.END)
+    kg_value.insert(0, f"{round(converted_weight, 1)} Lb")
 
 
 def kg_to_lb():
-    weight = kg_value.get()
+    weight = lb_value.get()
     converted_weight = float(weight) * CONVERT_TO_LB
-    kg_text.insert(0, f"The weight in pounds is {round(converted_weight, 1)}")
+    lb_value.delete(0, tk.END)
+    lb_value.insert(0, f"{round(converted_weight, 1)} Kg")
 
 
 window = tk.Tk()
