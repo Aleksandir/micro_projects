@@ -33,12 +33,22 @@ class Metronome:
         self.loop_interval = 60 / value
 
 
+def start():
+    metronome.bpm = int(bpm.get())
+    metronome.loop_interval = 60 / metronome.bpm
+    metronome.play_metronome()
+
+
+def stop():
+    metronome.action = "stop"
+
+
 window = tk.Tk()
 
 # GUI design
 bpm = tk.Entry(width=10)
-start = tk.Button(text="Start")
-stop = tk.Button(text="Stop")
+start = tk.Button(text="Start", command=start)
+stop = tk.Button(text="Stop", command=stop)
 
 # Layout
 window.title("Metronome")
@@ -47,31 +57,6 @@ bpm.grid(column=0, row=0, columnspan=2)
 start.grid(column=0, row=1)
 stop.grid(column=1, row=1)
 
-# def get_bpm():
-#     while True:
-#         bpm_str = input("Enter the BPM (or q to quit): ")
-#         # checking if in string due to extra space when first checked
-#         if "q" in bpm_str.lower():
-#             return None
-#         try:
-#             bpm = int(bpm_str)
-#             return bpm
-#         except ValueError:
-#             print("Invalid input. Please enter a valid integer or q to quit.")
+window.mainloop()
 
-
-#! currently wont quit or change bpm after being called
-def main():
-    metronome = Metronome(0)
-    window.mainloop()
-    while True:
-        bpm = bpm.get()
-        if start:
-            metronome.bpm = bpm
-            metronome.loop_interval = 60 / bpm
-            metronome.play_metronome()
-        elif stop:
-            metronome.action = "stop"
-
-
-# main()
+metronome = Metronome(60)
