@@ -27,8 +27,8 @@ window.title("Weight Converter")
 converter_text = tk.Label(text="Weight:")
 
 # buttons
-kg_button = tk.Button(text="Pounds", command=lb_to_kg)
-lb_button = tk.Button(text="Kilograms", command=kg_to_lb)
+kg_button = tk.Button(text="Lb to Kg", command=lb_to_kg)
+lb_button = tk.Button(text="Kg to Lb", command=kg_to_lb)
 
 # Data entry panel
 value = tk.Entry(width=10)
