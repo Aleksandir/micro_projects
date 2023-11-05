@@ -7,6 +7,7 @@ Makefile
 README.md
 readthedocs-requirements.txt
 requirements.txt
+setup.cfg
 setup.py
 tests-requirements.txt
 docs/Makefile
