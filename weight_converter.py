@@ -23,26 +23,26 @@ window = tk.Tk()
 window.resizable(width=False, height=False)
 window.title("Weight Converter")
 
+# label text
 converter_text = tk.Label(text="Weight:")
+
+# buttons
 kg_button = tk.Button(text="Pounds", command=lb_to_kg)
 lb_button = tk.Button(text="Kilograms", command=kg_to_lb)
 
-value = tk.Entry()
+# Data entry panel
+value = tk.Entry(width=10)
 
+# Layout
+# row 1
 converter_text.grid(column=0, row=1)
 value.grid(column=1, row=1, pady=10, padx=10)
 
+# row 2
 kg_button.grid(column=0, row=2)
 lb_button.grid(column=1, row=2)
 
+# row 3
 
-# lb_text = tk.Label(text="Enter the weight in pounds: ")
-# lb_text.pack()
-
-# lb_value = tk.Entry()
-# lb_value.pack()
-
-# # lb_button = tk.Button(text="Convert to kilograms", command=kg_to_lb)
-# lb_button.pack()
 
 window.mainloop()
