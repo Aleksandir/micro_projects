@@ -1,3 +1,4 @@
+import threading
 import tkinter as tk
 from subprocess import Popen
 from time import sleep
@@ -11,12 +12,7 @@ class Metronome:
         self.sound = ["afplay", "Metronome/beep.mp3"]
 
     def play_metronome(self):
-        while True:
-            # Check if the stop action has been triggered
-            if self.action == "stop":
-                self.action = ""  # Reset the action attribute
-                break
-
+        while self.action != "stop":
             # Play the sound
             Popen(self.sound)
 
@@ -34,19 +30,24 @@ class Metronome:
 
 
 def start():
+    metronome.action = "start"
     metronome.bpm = int(bpm.get())
     metronome.loop_interval = 60 / metronome.bpm
-    metronome.play_metronome()
+    threading.Thread(target=metronome.play_metronome).start()
 
 
 def stop():
     metronome.action = "stop"
 
 
+metronome = Metronome(60)
+
 window = tk.Tk()
 
-# GUI design
+# data entry panel
 bpm = tk.Entry(width=10)
+
+# buttons
 start = tk.Button(text="Start", command=start)
 stop = tk.Button(text="Stop", command=stop)
 
@@ -58,5 +59,3 @@ start.grid(column=0, row=1)
 stop.grid(column=1, row=1)
 
 window.mainloop()
-
-metronome = Metronome(60)
