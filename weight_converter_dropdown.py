@@ -42,7 +42,7 @@ clicked = tk.StringVar(window)
 clicked.set(options[0])
 options = tk.OptionMenu(window, clicked, *options)
 
-# if the user selects a new option, make the entry box blank
+# Whenever the value of clicked changes, delete all the text from the value Entry widget
 clicked.trace("w", lambda *args: value.delete(0, tk.END))
 
 # Data entry panel
