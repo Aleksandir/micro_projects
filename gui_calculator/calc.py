@@ -14,6 +14,8 @@ def evaluate_calculation():
     global calculation
     try:
         calculation = str(eval(calculation))
+        if calculation.endswith(".0"):
+            calculation = calculation[:-2]
         text_result.delete("1.0", "end")
         text_result.insert("1.0", calculation)
     except:  # noqa: E722
