@@ -10,7 +10,6 @@ difficulty = 1,2,3,5,8,13,21,34
 | **Idea**                                                                                                      | **Difficulty/Rating** |
 | ------------------------------------------------------------------------------------------------------------- | --------------------- |
 | Flip image tool with gui                                                                                      | 3                     |
-| calculator with GUI                                                                                           | 5                     |
 | Todo list app                                                                                                 | 5                     |
 | drawing app with gui                                                                                          | 5                     |
 | use pygame to make snake                                                                                      | 8                     |
