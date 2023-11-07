@@ -40,6 +40,7 @@ root = tk.Tk()
 root.resizable(False, False)
 root.bind("<Key>", key_press)
 root.bind("<Return>", lambda event: evaluate_calculation())
+root.title("Calculator")
 
 text_result = tk.Text(root, height=2, width=22, font=("Arial", 24))
 text_result.grid(columnspan=5)
