@@ -29,7 +29,7 @@ def clear_field():
 
 
 root = tk.Tk()
-# root.geometry("300x275")
+root.resizable(False, False)
 
 text_result = tk.Text(root, height=2, width=16, font=("Arial", 24))
 text_result.grid(columnspan=5)
