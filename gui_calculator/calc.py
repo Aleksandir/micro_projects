@@ -28,8 +28,16 @@ def clear_field():
     text_result.delete("1.0", "end")
 
 
+def key_press(event):
+    char = event.char
+    if char.isdigit() or char in ["+", "-", "*", "/", "(", ")"]:
+        add_to_calculation(char)
+
+
 root = tk.Tk()
 root.resizable(False, False)
+root.bind("<Key>", key_press)
+root.bind("<Return>", lambda event: evaluate_calculation())
 
 text_result = tk.Text(root, height=2, width=22, font=("Arial", 24))
 text_result.grid(columnspan=5)
