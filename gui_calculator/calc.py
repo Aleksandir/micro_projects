@@ -33,7 +33,7 @@ def clear_field():
 def key_press(event):
     char = event.char
     match char:
-        case _ if char.isdigit() or char in ["+", "-", "*", "/", "(", ")"]:
+        case _ if char.isdigit() or char in ["+", "-", "*", "/", "(", ")", "."]:
             add_to_calculation(char)
         case "x":
             add_to_calculation("*")
