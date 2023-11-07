@@ -34,6 +34,10 @@ def key_press(event):
     char = event.char
     if char.isdigit() or char in ["+", "-", "*", "/", "(", ")"]:
         add_to_calculation(char)
+    if char == "x":
+        add_to_calculation("*")
+    if char == "^":
+        add_to_calculation("**")
 
 
 def backspace():
