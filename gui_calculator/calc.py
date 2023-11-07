@@ -36,10 +36,18 @@ def key_press(event):
         add_to_calculation(char)
 
 
+def backspace():
+    global calculation
+    calculation = calculation[:-1]
+    text_result.delete("1.0", "end")
+    text_result.insert("1.0", calculation)
+
+
 root = tk.Tk()
 root.resizable(False, False)
 root.bind("<Key>", key_press)
 root.bind("<Return>", lambda event: evaluate_calculation())
+root.bind("<BackSpace>", lambda event: backspace())
 root.title("Calculator")
 
 text_result = tk.Text(root, height=2, width=22, font=("Arial", 24))
