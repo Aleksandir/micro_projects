@@ -48,6 +48,8 @@ def key_press(event):
             add_to_calculation("**")
         case "=":
             evaluate_calculation()
+        case "c":
+            clear_field()
         case _:
             pass  # Ignore other characters
 
