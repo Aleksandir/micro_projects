@@ -1,3 +1,4 @@
+import re
 import tkinter as tk
 
 calculation = ""
@@ -10,9 +11,15 @@ def add_to_calculation(symbol):
     text_result.insert("1.0", calculation)
 
 
+# the regular expression is used to add * between number and ( and ) and number
+# for example: 2(3+4) -> 2*(3+4)
 def evaluate_calculation():
     global calculation
     try:
+        # Add * between number and (
+        calculation = re.sub(r"(\d)\(", r"\1*(", calculation)
+        # Add * between ) and number
+        calculation = re.sub(r"\)(\d)", r")*\1", calculation)
         calculation = str(eval(calculation))
         if calculation.endswith(".0"):
             calculation = calculation[:-2]
