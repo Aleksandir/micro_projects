@@ -198,4 +198,23 @@ btn_close = tk.Button(
 )
 btn_close.grid(row=5, column=3)
 
+btn_clear = tk.Button(
+    root,
+    text="c",
+    command=clear_field,
+    height=2,
+    width=11,
+    font=("Arial", 14),
+)
+btn_clear.grid(row=6, column=1, columnspan=2)
+btn_equals = tk.Button(
+    root,
+    text="=",
+    command=evaluate_calculation,
+    height=2,
+    width=11,
+    font=("Arial", 14),
+)
+btn_equals.grid(row=6, column=3, columnspan=2)
+
 root.mainloop()
