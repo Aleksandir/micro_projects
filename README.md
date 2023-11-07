@@ -1,8 +1,21 @@
-https://www.datacamp.com/blog/60-python-projects-for-all-levels-expertise
-precentral map generation - https://medium.com/inspired-to-program-%E3%85%82-%D9%88-%CC%91%CC%91/procedural-generation-in-python-7b75127b2f74
+# Aleksandir's Micro Projects
 
-https://pypi.org/project/license-plate-recognition/
-https://python-graph-gallery.com/312-add-markers-on-folium-map/
+This repo holds many small projects that do not require their own. Most are written as a way to learn Python and many associated libraries.
+
+If any tutorials were used, you will find the link to the tutorial in a comment at the top of the file. If you have any questions, feel free to contact me.
+
+Below are some links to future projects I would like to do, as well as some ideas I have had. I am always open to suggestions for new projects, so feel free to contact me with any ideas you have. I will also be adding more projects to this list as I think of them.
+
+They are ordered by difficulty using the Fibonacci sequence so that I can easily pick a project to work on based on how much time I have. As I complete projects, I will remove them from the table.
+
+**Project ideas** - https://www.datacamp.com/blog/60-python-projects-for-all-levels-expertise
+
+**precentral map generation** - https://medium.com/inspired-to-program-%E3%85%82-%D9%88-%CC%91%CC%91/procedural-generation-in-python-7b75127b2f74
+
+
+**License plate recognition** - https://pypi.org/project/license-plate-recognition/
+
+**Interactive map** - https://python-graph-gallery.com/312-add-markers-on-folium-map/
 https://pypi.org/project/image2gps/#description
 
 difficulty = 1,2,3,5,8,13,21,34
