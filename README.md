@@ -12,7 +12,6 @@ They are ordered by difficulty using the Fibonacci sequence so that I can easily
 
 **precentral map generation** - https://medium.com/inspired-to-program-%E3%85%82-%D9%88-%CC%91%CC%91/procedural-generation-in-python-7b75127b2f74
 
-
 **License plate recognition** - https://pypi.org/project/license-plate-recognition/
 
 **Interactive map** - https://python-graph-gallery.com/312-add-markers-on-folium-map/
@@ -23,7 +22,7 @@ difficulty = 1,2,3,5,8,13,21,34
 | **Idea**                                                                                                      | **Difficulty/Rating** |
 | ------------------------------------------------------------------------------------------------------------- | --------------------- |
 | Flip image tool with gui                                                                                      | 3                     |
-| Todo list app                                                                                                 | 5                     |
+| Todo list app (5 if gui, 13 if web app)                                                                       | 5                     |
 | drawing app with gui                                                                                          | 5                     |
 | use pygame to make snake                                                                                      | 8                     |
 | Python pdf manager                                                                                            | 8                     |
