@@ -178,4 +178,24 @@ btn_div = tk.Button(
 )
 btn_div.grid(row=5, column=4)
 
+btn_open = tk.Button(
+    root,
+    text="(",
+    command=lambda: add_to_calculation("("),
+    height=2,
+    width=5,
+    font=("Arial", 14),
+)
+btn_open.grid(row=5, column=1)
+
+btn_close = tk.Button(
+    root,
+    text=")",
+    command=lambda: add_to_calculation(")"),
+    height=2,
+    width=5,
+    font=("Arial", 14),
+)
+btn_close.grid(row=5, column=3)
+
 root.mainloop()
