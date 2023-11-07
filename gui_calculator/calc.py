@@ -38,6 +38,8 @@ def key_press(event):
         add_to_calculation("*")
     if char == "^":
         add_to_calculation("**")
+    if char == "=":
+        evaluate_calculation()
 
 
 def backspace():
