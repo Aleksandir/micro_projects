@@ -21,6 +21,9 @@ difficulty = 1,2,3,5,8,13,21,34
 
 | **Idea**                                                                                                      | **Difficulty/Rating** |
 | ------------------------------------------------------------------------------------------------------------- | --------------------- |
+| Use SciaPy                                                                                                     | ?                     |
+| Use NumPy                                                                                                     | ?                     |
+| Use PyOpenGL                                                                                                  | ?                     |
 | Flip image tool with gui                                                                                      | 3                     |
 | Todo list app (5 if gui, 13 if web app)                                                                       | 5                     |
 | drawing app with gui                                                                                          | 5                     |
