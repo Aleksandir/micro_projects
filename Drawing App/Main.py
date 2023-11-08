@@ -83,3 +83,14 @@ for index, buttonName in enumerate(buttons):
 # Canvas
 canvas = pygame.Surface(canvasSize)
 canvas.fill((255, 255, 255))
+
+# Game loop.
+while True:
+    screen.fill((30, 30, 30))
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+    # Drawing the Buttons
+    for object in objects:
+        object.process()
