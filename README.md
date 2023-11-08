@@ -8,6 +8,8 @@ Below are some links to future projects I would like to do, as well as some idea
 
 They are ordered by difficulty using the Fibonacci sequence so that I can easily pick a project to work on based on how much time I have. As I complete projects, I will remove them from the table.
 
+If you wish to run any of the projects, you will need to install the required libraries. You can do this by running `pip install -r requirements.txt` in the root directory of this repo. Please note that requirements.txt is quite large due to it including all the libraries I have used in all the projects. If you wish to only install the libraries for a specific project, you can find the required libraries based on the imports at the top of the file. if the file is multi-file, I'll have a requirements.txt in the folder.
+
 **Project ideas** - https://www.datacamp.com/blog/60-python-projects-for-all-levels-expertise
 
 **precentral map generation** - https://medium.com/inspired-to-program-%E3%85%82-%D9%88-%CC%91%CC%91/procedural-generation-in-python-7b75127b2f74
