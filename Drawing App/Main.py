@@ -3,12 +3,6 @@ import sys
 
 import pygame
 
-# import system
-
-# # Increase Dots Per inch so it looks sharper
-# if system.platform == "win32":
-#     ctypes.windll.shcore.SetProcessDpiAwareness(True)
-
 # Pygame Configuration
 pygame.init()
 fps = 300
