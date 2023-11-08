@@ -18,6 +18,7 @@ If you wish to run any of the projects, you will need to install the required li
 
 **Interactive map** - https://python-graph-gallery.com/312-add-markers-on-folium-map/
 https://pypi.org/project/image2gps/#description
+handwriting recognition** - https://www.kaggle.com/datasets/sachinpatel21/az-handwritten-alphabets-in-csv-format
 
 difficulty = 1,2,3,5,8,13,21,34
 
@@ -30,7 +31,9 @@ difficulty = 1,2,3,5,8,13,21,34
 | Flip image tool with gui                                                                                      | 3                     |
 | Todo list app (5 if gui, 13 if web app)                                                                       | 5                     |
 | drawing app with gui                                                                                          | 5                     |
+| Analyse a dataset (Diamonds - https://www.kaggle.com/shivam2503/diamonds)                                     | 5                     |
 | use pygame to make snake                                                                                      | 8                     |
+| MNIST digit recognition                                                                                       | 8                     |
 | Python pdf manager                                                                                            | 8                     |
 | Chess game                                                                                                    | 8                     |
 | web scraper to compare price between woolworths and coles (beautiful soup)                                    | 8                     |
