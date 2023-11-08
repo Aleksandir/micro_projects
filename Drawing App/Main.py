@@ -47,3 +47,8 @@ def changebrushSize(dir):
         brushSize += brushSizeSteps
     else:
         brushSize -= brushSizeSteps
+
+
+# Save the surface to the Disk
+def save():
+    pygame.image.save(canvas, "canvas.png")
