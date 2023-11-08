@@ -26,7 +26,7 @@ difficulty = 1,2,3,5,8,13,21,34
 | Use SciPy                                                                                                     | ?                     |
 | Use NumPy                                                                                                     | ?                     |
 | Use PyOpenGL                                                                                                  | ?                     |
-| File renaming tool                                                                                           | 2                     |
+| File renaming tool                                                                                            | 2                     |
 | Flip image tool with gui                                                                                      | 3                     |
 | Todo list app (5 if gui, 13 if web app)                                                                       | 5                     |
 | drawing app with gui                                                                                          | 5                     |
