@@ -52,3 +52,19 @@ def changebrushSize(dir):
 # Save the surface to the Disk
 def save():
     pygame.image.save(canvas, "canvas.png")
+
+
+# Button Variables.
+buttonWidth = 120
+buttonHeight = 35
+
+# Buttons and their respective functions.
+buttons = [
+    ["Black", lambda: changeColor([0, 0, 0])],
+    ["White", lambda: changeColor([255, 255, 255])],
+    ["Blue", lambda: changeColor([0, 0, 255])],
+    ["Green", lambda: changeColor([0, 255, 0])],
+    ["Brush Larger", lambda: changebrushSize("greater")],
+    ["Brush Smaller", lambda: changebrushSize("smaller")],
+    ["Save", save],
+]
