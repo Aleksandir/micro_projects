@@ -36,7 +36,7 @@ while True:
     elif user_input == "r":
         new_file_name = input("Enter new file name: ").strip()
         while new_file_name == "":
-            new_file_name = input("Enter new file name: ").strip()
+            new_file_name = input("Enter new file name: ")
 
         file_path = input("Enter file path: ").strip()
         if file_path == "test":
