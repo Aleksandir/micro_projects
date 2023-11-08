@@ -79,3 +79,7 @@ for index, buttonName in enumerate(buttons):
         buttonName[0],
         buttonName[1],
     )
+
+# Canvas
+canvas = pygame.Surface(canvasSize)
+canvas.fill((255, 255, 255))
