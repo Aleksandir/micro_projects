@@ -31,3 +31,10 @@ canvasSize = [800, 800]
 # Button Class
 class Button:
     ...
+
+
+# Handler Functions
+# Changing the Color
+def changeColor(color):
+    global drawColor
+    drawColor = color
