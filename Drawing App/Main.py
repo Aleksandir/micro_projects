@@ -38,3 +38,12 @@ class Button:
 def changeColor(color):
     global drawColor
     drawColor = color
+
+
+# Changing the Brush Size
+def changebrushSize(dir):
+    global brushSize
+    if dir == "greater":
+        brushSize += brushSizeSteps
+    else:
+        brushSize -= brushSizeSteps
