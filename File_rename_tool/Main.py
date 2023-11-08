@@ -26,3 +26,24 @@ def rename(path, new_name):
 
 
 rename(test_path, "hello")
+
+while True:
+    print("Enter 'q' to quit")
+    print("Enter 'r' to rename")
+    user_input = input("Enter your choice: ")
+    if user_input == "q":
+        break
+    elif user_input == "r":
+        new_file_name = input("Enter new file name: ").strip()
+        while new_file_name == "":
+            new_file_name = input("Enter new file name: ").strip()
+
+        file_path = input("Enter file path: ").strip()
+        if file_path == "test":
+            file_path = test_path
+        while os.listdir(file_path) == []:
+            print("No files in directory")
+            file_path = input("Enter file path: ").strip()
+        rename(test_path, new_file_name)
+    else:
+        print("Invalid input")
