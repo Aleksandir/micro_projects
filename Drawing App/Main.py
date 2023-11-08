@@ -26,3 +26,8 @@ brushSize = 30
 brushSizeSteps = 3
 # Drawing Area Size
 canvasSize = [800, 800]
+
+
+# Button Class
+class Button:
+    ...
