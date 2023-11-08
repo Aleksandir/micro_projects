@@ -68,3 +68,14 @@ buttons = [
     ["Brush Smaller", lambda: changebrushSize("smaller")],
     ["Save", save],
 ]
+
+# Making the buttons
+for index, buttonName in enumerate(buttons):
+    Button(
+        index * (buttonWidth + 10) + 10,
+        10,
+        buttonWidth,
+        buttonHeight,
+        buttonName[0],
+        buttonName[1],
+    )
