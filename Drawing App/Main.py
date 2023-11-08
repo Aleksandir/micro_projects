@@ -94,3 +94,7 @@ while True:
     # Drawing the Buttons
     for object in objects:
         object.process()
+
+    # Draw the Canvas at the center of the screen
+    x, y = screen.get_size()
+    screen.blit(canvas, [x / 2 - canvasSize[0] / 2, y / 2 - canvasSize[1] / 2])
