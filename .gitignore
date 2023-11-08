@@ -10,3 +10,4 @@ helloworld_rust/target/.rustc_info.json
 .DS_Store
 .vscode
 .venv
+test_files
