@@ -111,3 +111,12 @@ while True:
             [dx, dy],
             brushSize,
         )
+        # Reference Dot
+    pygame.draw.circle(
+        screen,
+        drawColor,
+        [100, 100],
+        brushSize,
+    )
+    pygame.display.flip()
+    fpsClock.tick(fps)
