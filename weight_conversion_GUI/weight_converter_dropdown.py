@@ -2,6 +2,10 @@ import tkinter as tk
 
 
 def convert():
+    """
+    Converts the weight value entered by the user based on the selected conversion type.
+    The converted weight is displayed in the GUI.
+    """
     conversion_type = clicked.get()
     weight = float(value.get())
     conversion_value = conversions[conversion_type]
