@@ -7,6 +7,13 @@ test_path = "/Users/aleks/Documents/_GIthub_Repositories/micro_projects/File_ren
 
 
 def rename(path, new_name):
+    """
+    Renames all files in the given path that end with ".txt" to the new name provided.
+
+    Args:
+    - path (str): The path to the directory containing the files to be renamed.
+    - new_name (str): The new name to be used for the files.
+    """
     # Create a variable to track the number of files
     count = 0
     # Loop over each file in the path
