@@ -22,15 +22,16 @@ def evaluate_calculation(calculation):
         calculation = str(eval(calculation))
         if calculation.endswith(".0"):
             calculation = calculation[:-2]
-        update_display(calculation)
-    except:  # noqa: E722
-        clear_field()
-        update_display("Error")
+        return calculation
+    except Exception:
+        return "Error"
 
 
-def update_display(text):
+def update_display():
+    global calculation
+    result = evaluate_calculation(calculation)
     text_result.delete("1.0", "end")
-    text_result.insert("1.0", text)
+    text_result.insert("1.0", result)
 
 
 def clear_field():
@@ -67,7 +68,7 @@ if __name__ == "__main__":
     root = tk.Tk()
     root.resizable(False, False)
     root.bind("<Key>", key_press)
-    root.bind("<Return>", lambda event: evaluate_calculation(calculation))
+    root.bind("<Return>", lambda event: update_display())
     root.bind("<BackSpace>", lambda event: backspace())
     root.title("Calculator")
 
@@ -248,7 +249,7 @@ if __name__ == "__main__":
     btn_equals = tk.Button(
         root,
         text="=",
-        command=lambda: evaluate_calculation(calculation),
+        command=update_display,
         height=2,
         width=15,
         font=("Arial", 14),
