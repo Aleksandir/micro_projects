@@ -5,6 +5,21 @@ import tkinter as tk
 
 
 class Timer:
+    """
+    A class representing a countdown timer.
+
+    Attributes:
+    - time (int): the duration of the timer in seconds
+    - running (bool): whether the timer is currently running
+    - display (str): a string representation of the remaining time in the format "HH:MM:SS"
+
+    Methods:
+    - start(): starts the timer
+    - _run(): the main loop of the timer, which decrements the time and updates the display
+    - stop(): stops the timer
+    - reset(): resets the timer to its initial state
+    """
+
     def __init__(self, time):
         self.time = time
         self.running = False
