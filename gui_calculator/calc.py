@@ -29,9 +29,9 @@ def evaluate_calculation(calculation):
 
 def update_display():
     global calculation
-    result = evaluate_calculation(calculation)
+    calculation = evaluate_calculation(calculation)
     text_result.delete("1.0", "end")
-    text_result.insert("1.0", result)
+    text_result.insert("1.0", calculation)
 
 
 def clear_field():
