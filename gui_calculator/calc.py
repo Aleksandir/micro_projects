@@ -1,3 +1,8 @@
+"""
+This module provides a GUI calculator using tkinter library.
+It allows the user to perform basic arithmetic operations and evaluate expressions.
+The calculator supports the following operations: +, -, *, /, (, ), ., x (for multiplication), and ^ (for exponentiation).
+"""
 import re
 import tkinter as tk
 
@@ -5,6 +10,15 @@ calculation = ""
 
 
 def add_to_calculation(symbol):
+    """
+    Adds the given symbol to the current calculation and updates the text result.
+
+    Args:
+        symbol (str): The symbol to add to the calculation.
+
+    Returns:
+        None
+    """
     global calculation
     calculation += str(symbol)
     text_result.delete("1.0", "end")
@@ -28,18 +42,33 @@ def evaluate_calculation(calculation):
 
 
 def update_display():
+    """
+    Updates the display with the result of the current calculation.
+    """
     global calculation
     calculation = evaluate_calculation(calculation)
     text_result.replace("1.0", "end", calculation)
 
 
 def clear_field():
+    """
+    Clears the calculation field and the text result widget.
+    """
     global calculation
     calculation = ""
     text_result.delete("1.0", "end")
 
 
 def key_press(event):
+    """
+    Handles key press events for the calculator GUI.
+
+    Args:
+        event (Tkinter.Event): The key press event.
+
+    Returns:
+        None
+    """
     char = event.char
     match char:
         case _ if char.isdigit() or char in ["+", "-", "*", "/", "(", ")", "."]:
@@ -57,6 +86,9 @@ def key_press(event):
 
 
 def backspace():
+    """
+    Deletes the last character from the calculation string and updates the text result widget.
+    """
     global calculation
     calculation = calculation[:-1]
     text_result.delete("1.0", "end")
