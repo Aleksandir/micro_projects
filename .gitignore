@@ -11,3 +11,4 @@ helloworld_rust/target/.rustc_info.json
 .vscode
 .venv
 test_files
+Image_mirror/images
