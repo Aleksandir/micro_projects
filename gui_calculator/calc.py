@@ -13,8 +13,7 @@ def add_to_calculation(symbol):
 
 # the regular expression is used to add * between number and ( and ) and number
 # for example: 2(3+4) -> 2*(3+4)
-def evaluate_calculation():
-    global calculation
+def evaluate_calculation(calculation):
     try:
         # Add * between number and (
         calculation = re.sub(r"(\d)\(", r"\1*(", calculation)
@@ -47,7 +46,7 @@ def key_press(event):
         case "^":
             add_to_calculation("**")
         case "=":
-            evaluate_calculation()
+            evaluate_calculation(calculation)
         case "c":
             clear_field()
         case _:
@@ -64,7 +63,7 @@ def backspace():
 root = tk.Tk()
 root.resizable(False, False)
 root.bind("<Key>", key_press)
-root.bind("<Return>", lambda event: evaluate_calculation())
+root.bind("<Return>", lambda event: evaluate_calculation(calculation))
 root.bind("<BackSpace>", lambda event: backspace())
 root.title("Calculator")
 
@@ -246,7 +245,7 @@ btn_clear.grid(row=6, column=1, columnspan=2)
 btn_equals = tk.Button(
     root,
     text="=",
-    command=evaluate_calculation,
+    command=lambda: evaluate_calculation(calculation),
     height=2,
     width=15,
     font=("Arial", 14),
