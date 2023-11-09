@@ -30,6 +30,11 @@ def evaluate_calculation(calculation):
         pass
 
 
+def update_display(text):
+    text_result.delete("1.0", "end")
+    text_result.insert("1.0", text)
+
+
 def clear_field():
     global calculation
     calculation = ""
