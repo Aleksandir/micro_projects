@@ -22,12 +22,10 @@ def evaluate_calculation(calculation):
         calculation = str(eval(calculation))
         if calculation.endswith(".0"):
             calculation = calculation[:-2]
-        text_result.delete("1.0", "end")
-        text_result.insert("1.0", calculation)
+        update_display(calculation)
     except:  # noqa: E722
         clear_field()
-        text_result.insert("1.0", "Error")
-        pass
+        update_display("Error")
 
 
 def update_display(text):
