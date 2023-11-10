@@ -1,5 +1,7 @@
 # Tutorial https://www.youtube.com/watch?v=kq9hmaNK5ZM
 
+# TODO add a command line argument to choose the type of flip or add gui to choose the type of flip and display the image
+
 # test image path
 # python3 main.py --image /Users/aleks/Documents/_GIthub_Repositories/micro_projects/Image_flipper/Duck_image.jpg
 
@@ -33,6 +35,10 @@ def main():
 
     vertical_flip = cv2.flip(image, 0)
     cv2.imshow("Vertical Flip", vertical_flip)
+    cv2.waitKey(0)
+
+    hor_ver_flip = cv2.flip(image, -1)
+    cv2.imshow("Horizontal and Vertical Flip", hor_ver_flip)
     cv2.waitKey(0)
 
 
