@@ -3,8 +3,10 @@
 # test image path
 # python3 main.py --image /Users/aleks/Documents/_GIthub_Repositories/micro_projects/Image_flipper/Duck_image.jpg
 
+# argparse is a Python library for parsing command line arguments, it is used to pass the path to the image file as a command line argument
 import argparse
 
+# cv2 is the OpenCV library, which is used to process images and videos
 import cv2
 
 
@@ -27,6 +29,10 @@ def main():
 
     horizontal_flip = cv2.flip(image, 1)
     cv2.imshow("Horizontal Flip", horizontal_flip)
+    cv2.waitKey(0)
+
+    vertical_flip = cv2.flip(image, 0)
+    cv2.imshow("Vertical Flip", vertical_flip)
     cv2.waitKey(0)
 
 
