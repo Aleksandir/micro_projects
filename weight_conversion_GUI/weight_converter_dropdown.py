@@ -1,19 +1,28 @@
+import math
 import tkinter as tk
 
 
 # todo 1.1 LB to KG = 0.453592, make it equal to 0.5
-def convert(conversion_type: str, weight: float, conversion_table: dict):
+def convert(weight: float, conversion_info: list):
+    # conversion_info = {"Kg to Lb": 2.20462}
     """
     Converts the weight value entered by the user based on the selected conversion type.
     The converted weight is returned.
     """
-    conversion_value = conversion_table[conversion_type]
-    converted_weight = weight * conversion_value
+
+    def round_num(converted_weight, round_to_decimal_pos):
+        converted_unit = conversion_info[0].split(" ")[-1]
+        return f"{format(round(converted_weight, round_to_decimal_pos), ',')} {converted_unit}"
+
+    conversion_constant = conversion_info[1]
+    converted_weight = float(weight) * conversion_constant
 
     if converted_weight < 1:
-        return f"{format(round(converted_weight, 3), ",")} {conversion_type[-2:]}"
-    else:
-        return f"{format(round(converted_weight, 1), ",")} {conversion_type[-2:]}"
+        return round_num(converted_weight, 4)
+    elif converted_weight < 10:
+        return round_num(converted_weight, 3)
+    elif converted_weight < 100:
+        return round_num(converted_weight, 2)
 
 
 def main():
@@ -40,21 +49,23 @@ def main():
     converter_text = tk.Label(text="Weight:")
 
     # drop down menu
-    option = tk.StringVar(window)
-    option.set(options[0])
-    options = tk.OptionMenu(window, option, *options)
+    choice = tk.StringVar(window)
+    choice.set(options[0])
+    options = tk.OptionMenu(window, choice, *options)
 
     # Whenever the value of clicked changes, delete all the text from the value Entry widget
-    option.trace("w", lambda *args: value.delete(0, tk.END))
+    choice.trace("w", lambda *args: value.delete(0, tk.END))
 
     # Data entry panel
     value = tk.Entry(width=10)
 
     # Convert button
     def convert_and_insert():
-        print(option.get())
-        print(value.get())
-        result = convert(option.get(), float(value.get()), conversions)
+        weight = value.get()
+        conversion_info = (choice.get(), conversions[choice.get()])
+
+        result = convert(weight, conversion_info)
+
         value.delete(0, tk.END)
         value.insert(0, result)
 
