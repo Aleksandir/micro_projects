@@ -12,17 +12,24 @@ def convert(weight: float, conversion_info: list):
 
     def round_num(converted_weight, round_to_decimal_pos):
         converted_unit = conversion_info[0].split(" ")[-1]
-        return f"{format(round(converted_weight, round_to_decimal_pos), ',')} {converted_unit}"
+        rounded_weight = round(converted_weight, round_to_decimal_pos)
+        if round_to_decimal_pos == 0:
+            rounded_weight = int(rounded_weight)
+        return f"{format(rounded_weight, ',')} {converted_unit}"
 
     conversion_constant = conversion_info[1]
     converted_weight = float(weight) * conversion_constant
 
-    if converted_weight < 1:
+    if converted_weight == 0.0:
+        return f"0 {conversion_info[0].split(' ')[-1]}"
+    elif converted_weight.is_integer():
+        return round_num(converted_weight, 0)
+    elif abs(converted_weight) < 0.01:
+        return round_num(converted_weight, 5)
+    elif abs(converted_weight) < 0.1:
         return round_num(converted_weight, 4)
-    elif converted_weight < 10:
-        return round_num(converted_weight, 3)
-    elif converted_weight < 100:
-        return round_num(converted_weight, 2)
+    else:
+        return round_num(converted_weight, 1)
 
 
 def main():
