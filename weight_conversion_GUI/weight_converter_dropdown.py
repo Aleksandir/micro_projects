@@ -11,19 +11,9 @@ def convert(conversion_type, weight, conversion_table: dict):
     converted_weight = weight * conversion_value
 
     if converted_weight < 1:
-        return num_separator(f"{round(converted_weight, 3)} {conversion_type[-2:]}")
+        return f"{format(round(converted_weight, 3), ",")} {conversion_type[-2:]}"
     else:
-        return num_separator(f"{round(converted_weight, 1)} {conversion_type[-2:]}")
-
-
-def num_separator(num):
-    """
-    Takes a number and returns a string with commas seperating the thousands.
-    """
-    num = str(num)
-    if len(num) > 3:
-        num = num[:-3] + "," + num[-3:]
-    return num
+        return f"{format(round(converted_weight, 1), ",")} {conversion_type[-2:]}"
 
 
 # conversions = {
