@@ -16,22 +16,6 @@ def convert(conversion_type, weight, conversion_table: dict):
         return f"{format(round(converted_weight, 1), ",")} {conversion_type[-2:]}"
 
 
-# conversions = {
-#     "g to Kg": 0.001,
-#     "g to Lb": 0.00220462,
-#     "g to Oz": 0.035274,
-#     "Kg to G": 1000,
-#     "Kg to Lb": 2.20462,
-#     "Kg to Oz": 35.274,
-#     "Oz to Lb": 0.0625,
-#     "Oz to Kg": 0.0283495,
-#     "Lb to Kg": 0.453592,
-#     "Lb to Oz": 16,
-# }
-
-# options = list(conversions.keys())
-
-
 def main():
     conversions = {
         "g to Kg": 0.001,
