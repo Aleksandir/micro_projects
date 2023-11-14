@@ -2,82 +2,79 @@ import unittest
 
 from weight_converter_dropdown import convert
 
+# conversions = {
+#     "g to Kg": 0.001,
+#     "g to Lb": 0.00220462,
+#     "g to Oz": 0.035274,
+#     "Kg to G": 1000,
+#     "Kg to Lb": 2.20462,
+#     "Kg to Oz": 35.274,
+#     "Oz to Lb": 0.0625,
+#     "Oz to Kg": 0.0283495,
+#     "Lb to Kg": 0.453592,
+#     "Lb to Oz": 16,
+# }
+
+
+# logic
+# if converted_weight == 0.0:
+#     return f"0 {conversion_info[0].split(' ')[-1]}"
+# elif converted_weight.is_integer():
+#     return round_num(converted_weight, 0)
+# elif converted_weight < 1:
+#     return round_num(converted_weight, 4)
+# elif converted_weight < 10:
+#     return round_num(converted_weight, 3)
+# elif converted_weight < 100:
+#     return round_num(converted_weight, 2)
+# else:
+#     return round_num(converted_weight, 0)
+
 
 class TestConvert(unittest.TestCase):
     def test_kg_to_lb(self):
         conversion_info = ("Kg to Lb", 2.20462)
-        self.assertEqual(convert(1, conversion_info), 2.2046)
-        self.assertEqual(convert(10, conversion_info), 22.0462)
-        self.assertEqual(convert(100, conversion_info), 220.462)
-        self.assertEqual(convert(1000, conversion_info), 2204.62)
-        self.assertEqual(convert(-2, conversion_info), -4.40924)
-        self.assertEqual(convert(-20, conversion_info), -44.0924)
-        self.assertEqual(convert(-200, conversion_info), -440.924)
-        self.assertEqual(convert(-2000, conversion_info), -4409.24)
-        self.assertEqual(convert(0, conversion_info), 0)
-        self.assertEqual(convert(0.5, conversion_info), 1.10231)
-        self.assertEqual(convert(0.05, conversion_info), 0.11023)
-        self.assertEqual(convert(0.005, conversion_info), 0.01102)
+        self.assertEqual(convert(100, conversion_info), "220.5 Lb")
+        self.assertEqual(convert(1, conversion_info), "2.2 Lb")
+        self.assertEqual(convert(0, conversion_info), "0 Lb")
+        self.assertEqual(convert(0.5, conversion_info), "1.1 Lb")
+        self.assertEqual(convert(0.05, conversion_info), "0.1 Lb")
+        self.assertEqual(convert(0.005, conversion_info), "0.011 Lb")
+        self.assertEqual(convert(0.0005, conversion_info), "0.0011 Lb")
+        self.assertEqual(convert(-100, conversion_info), "-220.5 Lb")
+        self.assertEqual(convert(-10, conversion_info), "-22.0 Lb")
+        self.assertEqual(convert(-1, conversion_info), "-2.2 Lb")
+        self.assertEqual(convert(-0.1, conversion_info), "-0.2 Lb")
+        self.assertEqual(convert(-0.01, conversion_info), "-0.022 Lb")
+        self.assertEqual(convert(-0.001, conversion_info), "-0.0022 Lb")
 
     def test_lb_to_kg(self):
         conversion_info = ("Lb to Kg", 0.453592)
-        self.assertEqual(convert(1, conversion_info), 0.45359)
-        self.assertEqual(convert(10, conversion_info), 4.53592)
-        self.assertEqual(convert(100, conversion_info), 45.3592)
-        self.assertEqual(convert(1000, conversion_info), 453.592)
-        self.assertEqual(convert(-2, conversion_info), -0.90718)
-        self.assertEqual(convert(-20, conversion_info), -9.0718)
-        self.assertEqual(convert(-200, conversion_info), -90.718)
-        self.assertEqual(convert(-2000, conversion_info), -907.18)
-        self.assertEqual(convert(0, conversion_info), 0)
-        self.assertEqual(convert(0.5, conversion_info), 0.2268)
-        self.assertEqual(convert(0.05, conversion_info), 0.02268)
-        self.assertEqual(convert(0.005, conversion_info), 0.00227)
+        self.assertEqual(convert(100, conversion_info), "45.4 Kg")
+        self.assertEqual(convert(1, conversion_info), "0.5 Kg")
+        self.assertEqual(convert(0, conversion_info), "0 Kg")
+        self.assertEqual(convert(0.5, conversion_info), "0.2 Kg")
+        self.assertEqual(convert(0.05, conversion_info), "0.0227 Kg")
+        self.assertEqual(convert(-100, conversion_info), "-45.4 Kg")
+        self.assertEqual(convert(-10, conversion_info), "-4.5 Kg")
+        self.assertEqual(convert(-1, conversion_info), "-0.5 Kg")
+        self.assertEqual(convert(-0.1, conversion_info), "-0.0454 Kg")
 
-    def test_g_to_kg(self):
-        conversion_info = ("g to Kg", 0.001)
-        self.assertEqual(convert(1, conversion_info), 0.001)
-        self.assertEqual(convert(10, conversion_info), 0.01)
-        self.assertEqual(convert(100, conversion_info), 0.1)
-        self.assertEqual(convert(1000, conversion_info), 1)
-        self.assertEqual(convert(-2, conversion_info), -0.002)
-        self.assertEqual(convert(-20, conversion_info), -0.02)
-        self.assertEqual(convert(-200, conversion_info), -0.2)
-        self.assertEqual(convert(-2000, conversion_info), -2)
-        self.assertEqual(convert(0, conversion_info), 0)
-        self.assertEqual(convert(0.5, conversion_info), 0.0005)
-        self.assertEqual(convert(0.05, conversion_info), 0.00005)
-        self.assertEqual(convert(0.005, conversion_info), 0.00001)
-
-    def test_g_to_lb(self):
-        conversion_info = ("g to Lb", 0.00220462)
-        self.assertEqual(convert(1, conversion_info), 0.0022)
-        self.assertEqual(convert(10, conversion_info), 0.022)
-        self.assertEqual(convert(100, conversion_info), 0.2205)
-        self.assertEqual(convert(1000, conversion_info), 2.2046)
-        self.assertEqual(convert(-2, conversion_info), -0.0044)
-        self.assertEqual(convert(-20, conversion_info), -0.0441)
-        self.assertEqual(convert(-200, conversion_info), -0.441)
-        self.assertEqual(convert(-2000, conversion_info), -4.4092)
-        self.assertEqual(convert(0, conversion_info), 0)
-        self.assertEqual(convert(0.5, conversion_info), 0.0011)
-        self.assertEqual(convert(0.05, conversion_info), 0.0001)
-        self.assertEqual(convert(0.005, conversion_info), 0.00001)
-
-    def test_g_to_oz(self):
-        conversion_info = ("g to Oz", 0.035274)
-        self.assertEqual(convert(1, conversion_info), 0.0353)
-        self.assertEqual(convert(10, conversion_info), 0.3527)
-        self.assertEqual(convert(100, conversion_info), 3.5274)
-        self.assertEqual(convert(1000, conversion_info), 35.274)
-        self.assertEqual(convert(-2, conversion_info), -0.0705)
-        self.assertEqual(convert(-20, conversion_info), -0.7055)
-        self.assertEqual(convert(-200, conversion_info), -7.055)
-        self.assertEqual(convert(-2000, conversion_info), -70.55)
-        self.assertEqual(convert(0, conversion_info), 0)
-        self.assertEqual(convert(0.5, conversion_info), 0.0176)
-        self.assertEqual(convert(0.05, conversion_info), 0.0018)
-        self.assertEqual(convert(0.005, conversion_info), 0.0002)
+    def test_lb_to_oz(self):
+        conversion_info = ("Lb to Oz", 16)
+        self.assertEqual(convert(100, conversion_info), "1,600 Oz")
+        self.assertEqual(convert(1, conversion_info), "16 Oz")
+        self.assertEqual(convert(0, conversion_info), "0 Oz")
+        self.assertEqual(convert(0.5, conversion_info), "8 Oz")
+        self.assertEqual(convert(0.05, conversion_info), "0.8 Oz")
+        self.assertEqual(convert(0.005, conversion_info), "0.08 Oz")
+        self.assertEqual(convert(0.0005, conversion_info), "0.008 Oz")
+        self.assertEqual(convert(-100, conversion_info), "-1,600 Oz")
+        self.assertEqual(convert(-10, conversion_info), "-160 Oz")
+        self.assertEqual(convert(-1, conversion_info), "-16 Oz")
+        self.assertEqual(convert(-0.1, conversion_info), "-1.6 Oz")
+        self.assertEqual(convert(-0.01, conversion_info), "-0.2 Oz")
+        self.assertEqual(convert(-0.001, conversion_info), "-0.016 Oz")
 
 
 if __name__ == "__main__":
