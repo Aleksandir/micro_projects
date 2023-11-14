@@ -1,12 +1,12 @@
 import tkinter as tk
 
 
-def convert(conversion_type, weight, conversion_table: dict):
+# todo 1.1 LB to KG = 0.453592, make it equal to 0.5
+def convert(conversion_type: str, weight: float, conversion_table: dict):
     """
     Converts the weight value entered by the user based on the selected conversion type.
     The converted weight is returned.
     """
-    weight = float(weight)
     conversion_value = conversion_table[conversion_type]
     converted_weight = weight * conversion_value
 
@@ -54,7 +54,7 @@ def main():
     def convert_and_insert():
         print(option.get())
         print(value.get())
-        result = convert(option.get(), value.get(), conversions)
+        result = convert(option.get(), float(value.get()), conversions)
         value.delete(0, tk.END)
         value.insert(0, result)
 
