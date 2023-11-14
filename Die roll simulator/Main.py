@@ -1,6 +1,6 @@
 from os import system
 
-from Dice import Die
+from dice_art import Die
 
 
 def clear_screen():
@@ -29,7 +29,7 @@ while roll_again == "Y":
     # M is the max value of all dice
     # N is the total number of die
     print(
-        f"Mathematically, the average total of all roll's is {int(die_count * 3.5)}.\n"
+        f"Did you know! Mathematically, the average total of all roll's is {int(die_count * 3.5)}.\n"
     )
 
     # ask to roll again
