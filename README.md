@@ -58,6 +58,7 @@ difficulty = 1,2,3,5,8,13,21,34
 | Random Wikipedia article                                                                                      | 21                    |
 | Shopping list where it checks if product is on sale, where its cheapest                                       | 21                    |
 | Takes image cords and place a pin on that location on a map                                                   | 21                    |
+| Password generator                                                                                            | 21                    |
 | Web app shows shapes and solves for parts                                                                     | 34                    |
 | Real-time license plate recognition                                                                           | 34                    |
 | Procedural map generation                                                                                     | 34                    |
