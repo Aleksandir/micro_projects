@@ -18,7 +18,7 @@ If you wish to run any of the projects, you will need to install the required li
 
 **Interactive map** - https://python-graph-gallery.com/312-add-markers-on-folium-map/
 https://pypi.org/project/image2gps/#description
-handwriting recognition** - https://www.kaggle.com/datasets/sachinpatel21/az-handwritten-alphabets-in-csv-format
+handwriting recognition\*\* - https://www.kaggle.com/datasets/sachinpatel21/az-handwritten-alphabets-in-csv-format
 
 difficulty = 1,2,3,5,8,13,21,34
 
@@ -28,15 +28,15 @@ difficulty = 1,2,3,5,8,13,21,34
 | Use NumPy                                                                                                     | ?                     |
 | Use PyOpenGL                                                                                                  | ?                     |
 | Todo list app (5 if gui, 13 if web app)                                                                       | 5                     |
-| drawing app with gui                                                                                          | 5                     |
+| Drawing app with gui                                                                                          | 5                     |
 | Analyse a dataset (Diamonds - https://www.kaggle.com/shivam2503/diamonds)                                     | 5                     |
-| use pygame to make snake                                                                                      | 8                     |
+| Use pygame to make snake                                                                                      | 8                     |
 | MNIST digit recognition                                                                                       | 8                     |
 | Python pdf manager                                                                                            | 8                     |
 | Chess game                                                                                                    | 8                     |
-| web scraper to compare price between woolworths and coles (beautiful soup)                                    | 8                     |
+| Web scraper to compare price between woolworths and coles                                                     | 8                     |
 | Book finder app                                                                                               | 8                     |
-| recipe app (using a database)                                                                                 | 8                     |
+| Recipe app (using a database)                                                                                 | 8                     |
 | Elevator class with graphic                                                                                   | 8                     |
 | Diamond Prices Data Analysis                                                                                  | 8                     |
 | Classify Song Genres from Audio Data                                                                          | 8                     |
@@ -47,5 +47,18 @@ difficulty = 1,2,3,5,8,13,21,34
 | Takes image cords and place a pin on that location on a map                                                   | 21                    |
 | Web app shows shapes and solves for parts                                                                     | 34                    |
 | Real-time license plate recognition                                                                           | 34                    |
-| procedural map generation                                                                                     | 34                    |
+| Procedural map generation                                                                                     | 34                    |
 | Take licence plate data from an image, and using an API, return the make and model (might need to web scrape) | 34                    |
+| Address book                                                                                                  | 8                     |
+| Time between dates program(use python datetime)                                                               | 5                     |
+| Alarm clock                                                                                                   | 5                     |
+| Web scraper                                                                                                   | 8                     |
+| Notes app                                                                                                     | 13                    |
+| "Create a “site updated” notification system"                                                                 | 8                     |
+| Stock market predictor                                                                                        | 34                    |
+| Mad libs generator                                                                                            | 1                     |
+| YouTube downloader                                                                                            | 8                     |
+| Word dictionary                                                                                               | 13                    |
+| Image format converter                                                                                        | 8                     |
+| Qr code generator                                                                                             | 13                    |
+| Random Wikipedia article                                                                                      | 21                    |
