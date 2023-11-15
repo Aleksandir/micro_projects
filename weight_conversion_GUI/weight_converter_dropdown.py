@@ -4,10 +4,16 @@ import tkinter as tk
 
 # todo 1.1 LB to KG = 0.453592, make it equal to 0.5
 def convert(weight: float, conversion_info: list):
-    # conversion_info = {"Kg to Lb": 2.20462}
     """
     Converts the weight value entered by the user based on the selected conversion type.
     The converted weight is returned.
+
+    :param weight: The weight value entered by the user.
+    :type weight: float
+    :param conversion_info: A list containing the conversion type and conversion constant.
+    :type conversion_info: list
+    :return: The converted weight value.
+    :rtype: str
     """
 
     def round_num(converted_weight, round_to_decimal_pos):
