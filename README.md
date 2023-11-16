@@ -27,10 +27,10 @@ difficulty = 1,2,3,5,8,13,21,34
 | Use SciPy                                                                                                     | ?                     |
 | Use NumPy                                                                                                     | ?                     |
 | Use PyOpenGL                                                                                                  | ?                     |
-| Use Jupyter notebooks to do some data visualisation                                                           | 3                     |
+| Use Jupyter notebooks to do some data visualization                                                           | 3                     |
 | Todo list app (5 if gui, 13 if web app)                                                                       | 5                     |
 | Drawing app with gui                                                                                          | 5                     |
-| Analyse a dataset (Diamonds - https://www.kaggle.com/shivam2503/diamonds)                                     | 5                     |
+| Analyze a dataset (Diamonds - https://www.kaggle.com/shivam2503/diamonds)                                     | 5                     |
 | Time between dates program(use python datetime)                                                               | 5                     |
 | Alarm clock                                                                                                   | 5                     |
 | Use pygame to make snake                                                                                      | 8                     |
@@ -61,5 +61,5 @@ difficulty = 1,2,3,5,8,13,21,34
 | Web app shows shapes and solves for parts                                                                     | 34                    |
 | Real-time license plate recognition                                                                           | 34                    |
 | Procedural map generation                                                                                     | 34                    |
-| Take licence plate data from an image, and using an API, return the make and model (might need to web scrape) | 34                    |
+| Take license plate data from an image, and using an API, return the make and model (might need to web scrape) | 34                    |
 | Stock market predictor                                                                                        | 34                    |
