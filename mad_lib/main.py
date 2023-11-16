@@ -1,6 +1,6 @@
-exclamation = input("Enter an exclamation (e.g. Wow!): ")
+exclamation = input("Enter an exclamation (e.g. Wow!): ").capitalize()
 while not exclamation:
-    exclamation = input("Enter an exclamation (e.g. Wow!): ")
+    exclamation = input("Enter an exclamation (e.g. Wow!): ").capitalize()
 if "!" in exclamation:
     exclamation = exclamation.replace("!", "")
 
