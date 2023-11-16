@@ -27,7 +27,6 @@ difficulty = 1,2,3,5,8,13,21,34
 | Use SciPy                                                                                                     | ?                     |
 | Use NumPy                                                                                                     | ?                     |
 | Use PyOpenGL                                                                                                  | ?                     |
-| Mad libs generator                                                                                            | 1                     |
 | Use Jupyter notebooks to do some data visualisation                                                           | 3                     |
 | Todo list app (5 if gui, 13 if web app)                                                                       | 5                     |
 | Drawing app with gui                                                                                          | 5                     |
