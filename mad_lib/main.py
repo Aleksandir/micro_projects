@@ -1,4 +1,6 @@
 exclamation = input("Enter an exclamation (e.g. Wow!): ")
+if "!" in exclamation:
+    exclamation = exclamation.replace("!", "")
 
 adverb = input("Enter an adverb (e.g. quickly): ")
 
