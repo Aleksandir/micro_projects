@@ -1,19 +1,19 @@
 exclamation = input("Enter an exclamation (e.g. Wow!): ")
-while exclamation == "":
+while not exclamation:
     exclamation = input("Enter an exclamation (e.g. Wow!): ")
 if "!" in exclamation:
     exclamation = exclamation.replace("!", "")
 
 adverb = input("Enter an adverb (e.g. quickly): ")
-while adverb == "":
+while not adverb:
     adverb = input("Enter an adverb (e.g. quickly): ")
 
 noun = input("Enter a noun (e.g. dog): ")
-while noun == "":
+while not noun:
     noun = input("Enter a noun (e.g. dog): ")
 
 adjective = input("Enter an adjective (e.g. beautiful): ")
-while adjective == "":
+while not adjective:
     adjective = input("Enter an adjective (e.g. beautiful): ")
 
 print(
