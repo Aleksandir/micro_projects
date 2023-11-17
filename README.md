@@ -27,6 +27,10 @@ difficulty = 1,2,3,5,8,13,21,34
 | Use SciPy                                                                                                     | ?                     |
 | Use NumPy                                                                                                     | ?                     |
 | Use PyOpenGL                                                                                                  | ?                     |
+| Bank account manager (to learn OOP)                                                                           | 3                     |
+| Library Management System (class for library, book and user)                                                  | 3                     |
+| shopping cart (class for product and shopping cart)                                                           | 3                     |
+| Geometry calculator (class for each shape, methods for area, perimeter and volume)                            | 3                     |
 | Use Jupyter notebooks to do some data visualization                                                           | 3                     |
 | Todo list app (5 if gui, 13 if web app)                                                                       | 5                     |
 | Drawing app with gui                                                                                          | 5                     |
